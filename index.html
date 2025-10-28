@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RR Mobile Shine - Premium Mobile Car Wash</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0a192f',
+              secondary: '#00b4d8',
+              accent: '#48cae4'
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-primary text-gray-100 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <img src="http://static.photos/automotive/1200x630/5" alt="Luxury Car Wash" class="absolute inset-0 w-full h-full object-cover">
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Premium <span class="text-secondary">Mobile</span> Car Care</h1>
+        <p class="text-xl md:text-2xl mb-10 text-gray-300">Professional mobile wash, valet & detailing at your doorstep</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#booking" class="bg-secondary hover:bg-blue-400 text-primary font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Book Now</a>
+          <a href="https://wa.me/27659400314" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full flex items-center justify-center gap-2 transition duration-300">
+            <i data-feather="message-circle"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price List Section -->
+    <section class="py-20 px-4 bg-gradient-to-b from-primary to-gray-900">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white"><span class="text-secondary">Our</span> Pricing</h2>
+        
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Centurion Pricing -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-2xl transform transition hover:-translate-y-2">
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-2xl font-bold text-secondary">Centurion Area</h3>
+              <span class="bg-blue-900 text-blue-200 text-sm px-3 py-1 rounded-full">Local</span>
+            </div>
+            <div class="space-y-4">
+              <div class="flex justify-between py-3 border-b border-gray-700">
+                <span>Hatchback/Sedan</span>
+                <span class="font-bold">R140</span>
+              </div>
+              <div class="flex justify-between py-3 border-b border-gray-700">
+                <span>Double Cab</span>
+                <span class="font-bold">R170</span>
+              </div>
+              <div class="flex justify-between py-3 border-b border-gray-700">
+                <span>SUV</span>
+                <span class="font-bold">R200</span>
+              </div>
+              <div class="flex justify-between py-3">
+                <span>7/9 Seaters</span>
+                <span class="font-bold">R220</span>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <p class="text-gray-400 mb-2">Call to book now:</p>
+              <a href="tel:0659400314" class="text-2xl font-bold text-secondary hover:text-blue-400 transition">065 940 0314</a>
+            </div>
+          </div>
+
+          <!-- Outside Centurion Pricing -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-2xl transform transition hover:-translate-y-2">
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-2xl font-bold text-secondary">Outside Centurion</h3>
+              <span class="bg-blue-900 text-blue-200 text-sm px-3 py-1 rounded-full">Travel</span>
+            </div>
+            <p class="text-gray-400 mb-6">Contact us for pricing outside Centurion area</p>
+            <div class="mt-8 text-center">
+              <a href="https://wa.me/27659400314" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition">
+                <i data-feather="message-circle"></i> WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 px-4 bg-gray-900">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">Our <span class="text-secondary">Services</span></h2>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition hover:-translate-y-2 group">
+            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+              <i data-feather="droplet" class="w-8 h-8 text-blue-300 group-hover:text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Full Car Wash</h3>
+            <p class="text-gray-400">Complete exterior wash with premium products to remove dirt and grime without damaging your paint.</p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition hover:-translate-y-2 group">
+            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+              <i data-feather="shield" class="w-8 h-8 text-blue-300 group-hover:text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Car Valet</h3>
+            <p class="text-gray-400">Interior deep cleaning including vacuuming, upholstery shampoo, and dashboard conditioning.</p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition hover:-translate-y-2 group">
+            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+              <i data-feather="sun" class="w-8 h-8 text-blue-300 group-hover:text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Car Polish</h3>
+            <p class="text-gray-400">Professional polishing to restore your car's shine and remove minor scratches and swirl marks.</p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition hover:-translate-y-2 group">
+            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+              <i data-feather="layers" class="w-8 h-8 text-blue-300 group-hover:text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Car Detailing</h3>
+            <p class="text-gray-400">Complete restoration of your vehicle's appearance, inside and out, to like-new condition.</p>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition hover:-translate-y-2 group">
+            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+              <i data-feather="zap" class="w-8 h-8 text-blue-300 group-hover:text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Headlights Restoration</h3>
+            <p class="text-gray-400">Remove oxidation and yellowing from headlights to improve visibility and appearance.</p>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition hover:-translate-y-2 group">
+            <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+              <i data-feather="star" class="w-8 h-8 text-blue-300 group-hover:text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Premium Package</h3>
+            <p class="text-gray-400">Our signature service combining wash, valet, polish and detailing for the ultimate shine.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Preview -->
+   <section class="py-20 px-4 bg-primary">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
+      Our <span class="text-secondary">Work</span>
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <a href="gallery.html" class="group">
+        <div class="w-full aspect-square overflow-hidden rounded-lg relative">
+          <img src="item6.jpg" alt="Before Wash" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white font-bold text-lg">View Gallery</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="gallery.html" class="group">
+        <div class="w-full aspect-square overflow-hidden rounded-lg relative">
+          <img src="item5.jpg" alt="After Wash" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white font-bold text-lg">View Gallery</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="gallery.html" class="group">
+        <div class="w-full aspect-square overflow-hidden rounded-lg relative">
+          <img src="item4.jpg" alt="Detail Work" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white font-bold text-lg">View Gallery</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="gallery.html" class="group">
+        <div class="w-full aspect-square overflow-hidden rounded-lg relative">
+          <img src="item3.jpg" alt="Interior Cleaning" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white font-bold text-lg">View Gallery</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="gallery.html" class="group">
+        <div class="w-full aspect-square overflow-hidden rounded-lg relative">
+          <img src="item2.jpg" alt="Headlight Restoration" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white font-bold text-lg">View Gallery</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="gallery.html" class="group">
+        <div class="w-full aspect-square overflow-hidden rounded-lg relative">
+          <img src="item1.jpg" alt="Final Result" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <span class="text-white font-bold text-lg">View Gallery</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="gallery.html" class="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold py-3 px-8 rounded-full transition">
+        View Full Gallery
+        <i data-feather="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 px-4 bg-gradient-to-b from-gray-900 to-primary">
+      <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 bg-secondary p-12 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-primary mb-6">Ready for a <span class="text-white">Spotless</span> Ride?</h2>
+            <p class="text-primary mb-8">Book your premium mobile car wash service today. We come to you!</p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+                  <i data-feather="phone" class="text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-primary">Call us now</p>
+                  <a href="tel:0659400314" class="text-xl font-bold text-primary hover:text-blue-900 transition">065 940 0314</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+                  <i data-feather="mail" class="text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-primary">Email us</p>
+                  <a href="mailto:info@rrmobileshine.com" class="text-xl font-bold text-primary hover:text-blue-900 transition">info@rrmobileshine.com</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+                  <i data-feather="message-circle" class="text-primary"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-primary">WhatsApp us</p>
+                  <a href="https://wa.me/27659400314" class="text-xl font-bold text-primary hover:text-blue-900 transition">065 940 0314</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-12">
+            <h3 class="text-2xl font-bold text-white mb-6">Book Your Service</h3>
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block text-gray-400 mb-2">Your Name</label>
+                <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-secondary">
+              </div>
+              <div>
+                <label for="phone" class="block text-gray-400 mb-2">Phone Number</label>
+                <input type="tel" id="phone" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-secondary">
+              </div>
+              <div>
+                <label for="service" class="block text-gray-400 mb-2">Service Needed</label>
+                <select id="service" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-secondary">
+                  <option>Full Car Wash</option>
+                  <option>Car Valet</option>
+                  <option>Car Polish</option>
+                  <option>Car Detailing</option>
+                  <option>Headlights Restoration</option>
+                  <option>Premium Package</option>
+                </select>
+              </div>
+              <div>
+                <label for="date" class="block text-gray-400 mb-2">Preferred Date</label>
+                <input type="date" id="date" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-secondary">
+              </div>
+              <button type="submit" class="w-full bg-secondary hover:bg-blue-400 text-primary font-bold py-3 px-6 rounded-lg transition duration-300">Request Booking</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27659400314" 
+   class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1DA851] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-125 animate-bounce">
+  <i data-feather="message-circle" class="w-10 h-10"></i>
+</a>
+
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+</body>
+</html>
