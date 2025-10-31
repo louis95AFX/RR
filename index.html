@@ -78,19 +78,19 @@
         <div class="space-y-4 text-gray-200">
           <div class="flex justify-between py-3 border-b border-gray-700">
             <span>Hatchback/Sedan</span>
-            <span class="font-bold text-[#B8D0F5]">R140</span>
+            <span class="font-bold text-[#B8D0F5]"> Range from R130</span>
           </div>
           <div class="flex justify-between py-3 border-b border-gray-700">
             <span>Double Cab</span>
-            <span class="font-bold text-[#B8D0F5]">R170</span>
+            <span class="font-bold text-[#B8D0F5]">Range from R160</span>
           </div>
           <div class="flex justify-between py-3 border-b border-gray-700">
             <span>SUV</span>
-            <span class="font-bold text-[#B8D0F5]">R200</span>
+            <span class="font-bold text-[#B8D0F5]">Range from R180</span>
           </div>
           <div class="flex justify-between py-3">
             <span>7/9 Seaters</span>
-            <span class="font-bold text-[#B8D0F5]">R220</span>
+            <span class="font-bold text-[#B8D0F5]">Range from R200</span>
           </div>
         </div>
         <div class="mt-8 text-center">
@@ -106,17 +106,35 @@
     <span class="bg-[#B8D0F5] text-[#1A2341] text-sm px-3 py-1 rounded-full font-semibold">Travel</span>
   </div>
 
-  <div class="mb-8">
-    <h4 class="text-xl font-semibold text-[#B8D0F5] mb-3 border-b border-[#B8D0F5]/30 pb-2">
-      Outside Centurion Price List <span class="text-gray-300 text-base font-normal"></span>
-    </h4>
-    <ul class="text-gray-300 space-y-2 leading-relaxed">
-      <li><span class="text-[#B8D0F5] font-medium">Hatchback / Sedan:</span> R140.00</li>
-      <li><span class="text-[#B8D0F5] font-medium">Double Cab:</span> R170.00</li>
-      <li><span class="text-[#B8D0F5] font-medium">SUV:</span> R200.00</li>
-      <li><span class="text-[#B8D0F5] font-medium">7 / 9 Seaters:</span> R220.00</li>
-    </ul>
+  <div class="relative">
+  <h3 class="font-medium text-lg mb-1">WhatsApp</h3>
+  <p>+27 61 797 0996 / +27 66 569 1570</p>
+  <button onclick="openModal()" 
+    class="inline-block mt-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center">
+    <i data-feather="message-square" class="mr-2"></i> Enquire
+  </button>
+</div>
+
+<!-- Modal -->
+<div id="enquiryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-lg p-6 w-80 shadow-xl">
+    <h2 class="text-2xl font-bold mb-4 text-gray-800 text-center">Enquiry</h2>
+    <label class="block mb-2 text-gray-700 font-medium">Which area are you from?</label>
+    <input id="userArea" type="text" placeholder="Enter your area..." 
+           class="w-full border border-gray-300 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500">
+    <div class="flex justify-between">
+      <button onclick="closeModal()" 
+              class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold px-4 py-2 rounded-lg">
+        Cancel
+      </button>
+      <button onclick="sendToWhatsApp()" 
+              class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-lg">
+        Submit
+      </button>
+    </div>
   </div>
+</div>
+
 
   <div class="bg-[#B8D0F5]/10 border border-[#B8D0F5]/30 rounded-lg p-4 mb-8 text-center">
     <h4 class="text-lg font-semibold text-[#B8D0F5] mb-1">Call-Out Fee</h4>
@@ -427,7 +445,34 @@
   <i data-feather="message-circle" class="w-10 h-10"></i>
 </a>
 
+<script>
+  const modal = document.getElementById('enquiryModal');
+  const areaInput = document.getElementById('userArea');
+  const whatsappNumber = '27659400314'; // number without '+'
 
+  function openModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    areaInput.value = '';
+  }
+
+  function sendToWhatsApp() {
+    const area = areaInput.value.trim();
+    if (area === '') {
+      alert('Please enter your area before submitting.');
+      return;
+    }
+    const message = encodeURIComponent(`Hi! I'm enquiring from ${area}.`);
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappLink, '_blank');
+    closeModal();
+  }
+</script>
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="script.js"></script>
@@ -436,6 +481,7 @@
     </script>
 </body>
 </html>
+
 
 
 
